@@ -2,9 +2,9 @@
 
 This is a temporary homepage until we decide what framework to use.
 
-It uses TailwindCSS and Vite for the build.
+It uses TailwindCSS and Astro for the build.
 
-We are deploying this using netlify, but using gh actions on PRs on main to make sure that the project builds properly.
+It should get deployed to https://nexusia-z.github.io/ when the `main` branch is updated.
 
 ## Development
 
