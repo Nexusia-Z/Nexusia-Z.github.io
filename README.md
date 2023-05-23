@@ -4,7 +4,7 @@ This is a temporary homepage until we decide what framework to use.
 
 It uses TailwindCSS and Vite for the build.
 
-You can see the site at [https://nexusia-z.github.io](https://nexusiaz.github.io)
+We are deploying this using netlify, but using gh actions on PRs on main to make sure that the project builds properly.
 
 ## Development
 
