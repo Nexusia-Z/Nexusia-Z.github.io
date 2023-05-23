@@ -1,35 +1,20 @@
-# template-vite-js-tailwind-v3
+# Homepage for Nexusia Z
 
-- **template of:** vite + vanilaJS
-- **tailwindcss:** v3.x
+This is a temporary homepage until we decide what framework to use.
 
-## Started
+It uses TailwindCSS and Vite for the build.
 
-```bash
-yarn
-# or `npm install`
-```
+This should get a github pages site up and running once we setup an action to build and deploy.
 
----
-
-## Develop
+## Development
 
 ```bash
-yarn dev
-# or `npm run dev`
+npm install
+npm run dev
 ```
-
----
 
 ## Build
 
 ```bash
-yarn build
-# or `npm run build`
+npm run build
 ```
-
----
-
-<p align="center">
-<img src="./powered-by-vitawind-bright.png">
-</p>
