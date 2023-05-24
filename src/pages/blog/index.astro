@@ -4,9 +4,12 @@ const posts = await Astro.glob("/src/pages/blog/*.md"); // returns an array of p
 ---
 
 <BaseLayout title="Blog">
-  <h2 class="text-5xl md:text-6xl font-body font-black text-center m-8">Blog</h2>
+  <h2 class="text-5xl md:text-6xl font-body font-black text-center m-8">
+    Blog
+  </h2>
   <div class="flex justify-center items-center flex-col">
     {
+      // Construct a list of posts using the data from the glob
       posts.map((post) => (
         <article class="border-solid border-2 rounded-xl m-4 prose-2xl border-slate-600 p-5 max-w-prose ">
           <h2 class="font-extrabold m-4">{post.frontmatter.title}</h2>
@@ -14,7 +17,7 @@ const posts = await Astro.glob("/src/pages/blog/*.md"); // returns an array of p
           <a href={post.url} class="underline text-sky-800 text-center m-8">
             Read more
           </a>
-          <br/>
+          <br />
         </article>
       ))
     }

@@ -5,6 +5,9 @@ import "@fontsource/space-mono";
 
 const { title } = Astro.props;
 
+// Prepend the site title with the page title if it exists.
+// Example: if you set the page title to "About", the site title will become "About - Nexusia Z"
+// If you don't set a page title, the site title will be "Nexusia Z"
 const appendedTitle = title ? `${title} - Nexusia Z` : "Nexusia Z";
 
 import Header from "../components/Header.astro";
@@ -22,7 +25,7 @@ import Header from "../components/Header.astro";
     class="min-h-screen bg-gradient-to-b from-slate-700 to-slate-900 text-sky-50"
   >
     <header>
-      <Header/>
+      <Header />
       <slot name="header" />
     </header>
     <main>

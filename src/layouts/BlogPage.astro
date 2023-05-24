@@ -4,6 +4,11 @@ const { frontmatter } = Astro.props;
 
 const title = frontmatter.title ? `${frontmatter.title} - Blog` : "Blog";
 
+// Build the subtitle
+// Example:
+//  if both author and date are present: "by John Doe on 2021-01-01"
+//  if only author is present: "by John Doe"
+//  if only date is present: "on 2021-01-01"
 let subtitle = "";
 let subtitle_visible = false;
 
@@ -32,16 +37,16 @@ if (subtitle) {
 
   <style is:global>
     .prose-2xl ul {
-        @apply list-disc list-inside;
+      @apply list-disc list-inside;
     }
     .prose-2xl ol {
-        @apply list-decimal list-inside;
+      @apply list-decimal list-inside;
     }
   </style>
 
   <div class="flex justify-center items-center">
-      <article class="prose-2xl m-4 max-w-prose">
-        <slot />
-      </article>
+    <article class="prose-2xl m-4 max-w-prose">
+      <slot />
+    </article>
   </div>
 </BaseLayout>
