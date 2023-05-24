@@ -3,7 +3,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const posts = await Astro.glob("/src/pages/blog/*.md"); // returns an array of posts that live in the /blog directory
 ---
 
-<BaseLayout title="Blog">
+<BaseLayout title="Blog" description="List of all blogs on Nexusia Z">
   <h2 class="text-5xl md:text-6xl font-display font-black text-center m-8">
     Blog
   </h2>
