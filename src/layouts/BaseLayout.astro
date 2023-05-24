@@ -1,0 +1,62 @@
+---
+import "@fontsource-variable/space-grotesk";
+import "@fontsource/inter";
+import "@fontsource/space-mono";
+
+const { title, description, imageUrl } = Astro.props;
+
+// Prepend the site title with the page title if it exists.
+// Example: if you set the page title to "About", the site title will become "About - Nexusia Z"
+// If you don't set a page title, the site title will be "Nexusia Z"
+const appendedTitle = title ? `${title} - Nexusia Z` : "Nexusia Z";
+
+import Header from "../components/Header.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Open Graph Begin -->
+
+    <meta property="og:title" content={appendedTitle} />
+
+    <meta property="og:site_name" content="Nexusia Z" />
+
+    <meta property="og:url" content="nexusia-z.github.io" />
+
+    <meta property="og:description" content={description} />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" content={imageUrl} />
+
+    <!-- Open Graph End -->
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{appendedTitle}</title>
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-b from-slate-700 to-slate-900 text-sky-50 divide-y-8 md:divide-y-0 divide-slate-500/25 divide-solid"
+  >
+    <header>
+      <Header />
+      <slot name="header" />
+    </header>
+    <main>
+      <slot>
+        <p>No Content Provided.</p>
+      </slot>
+    </main>
+    <footer>
+      <slot name="footer" />
+    </footer>
+  </body>
+</html>

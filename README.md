@@ -18,3 +18,26 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## How to add a blog post
+
+Create a new markdown file in `src/pages/blog/` with the following format:
+
+```markdown
+---
+layout: ../../layouts/BlogPage.astro
+title: Your title
+author: Your name
+description: |
+  Your description
+date: May 24, 2023
+---
+
+This is **markdown** content for your blog post.
+```
+
+The content between the two `---` is the metadata for the blog post in yaml. The rest is the content of the blog post.
+
+You can put the entire description in one line if you want, but the pipe symbol (`|`) allows you to put it on multiple lines. Make sure to indent the text though.
+
+Push your changes to your fork and create a pull request to the `main` branch of this repository.
