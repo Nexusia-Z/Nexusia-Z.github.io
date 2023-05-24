@@ -26,27 +26,29 @@ if (subtitle) {
 ---
 
 <BaseLayout url={frontmatter.url} title={title}>
-  <div slot="header" class="m-8">
-    <h1 class="text-6xl md:text-7xl font-body font-black m-3 text-center">
-      {frontmatter.title}
-    </h1>
-    <p hidden={!subtitle_visible} class="text-center text-slate-400">
-      {subtitle}
-    </p>
-  </div>
+  <div class="divide-y-8 md:divide-y-0 divide-slate-500/10 divide-solid">
+    <div class="m-8">
+      <h1 class="text-6xl md:text-7xl font-body font-black m-3 text-center">
+        {frontmatter.title}
+      </h1>
+      <p hidden={!subtitle_visible} class="text-center text-slate-400">
+        {subtitle}
+      </p>
+    </div>
 
-  <style is:global>
-    .prose-2xl ul {
-      @apply list-disc list-inside;
-    }
-    .prose-2xl ol {
-      @apply list-decimal list-inside;
-    }
-  </style>
+    <style is:global>
+      .prose-2xl ul {
+        @apply list-disc list-inside;
+      }
+      .prose-2xl ol {
+        @apply list-decimal list-inside;
+      }
+    </style>
 
-  <div class="flex justify-center items-center mt-8">
-    <article class="prose-2xl m-4 max-w-prose">
-      <slot />
-    </article>
+    <div class="flex justify-center items-center mt-8">
+      <article class="prose-2xl m-4 my-8 max-w-prose">
+        <slot />
+      </article>
+    </div>
   </div>
 </BaseLayout>
