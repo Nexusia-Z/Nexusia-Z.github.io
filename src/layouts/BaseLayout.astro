@@ -1,6 +1,7 @@
 ---
-import '@fontsource/space-mono';
-import '@fontsource/inter';
+import '@fontsource-variable/space-grotesk';
+import "@fontsource/inter";
+import Header from "../components/Header.astro";
 ---
 
 <html lang="en">
@@ -11,7 +12,22 @@ import '@fontsource/inter';
     <meta name="generator" content={Astro.generator} />
     <title>Astro</title>
   </head>
-  <body class="min-h-screen bg-gradient-to-b from-slate-700 to-slate-900 text-sky-50">
-    <slot />
+  <body
+    class="min-h-screen bg-gradient-to-b from-slate-700 to-slate-900 text-sky-50"
+  >
+    <header>
+      <Header />
+      <slot name="header" />
+    </header>
+    <main>
+      <slot>
+        <p>
+          No Content Provided.
+        </p>
+      </slot>
+    </main>
+    <footer>
+      <slot name="footer" />
+    </footer>
   </body>
 </html>

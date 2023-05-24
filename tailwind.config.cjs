@@ -6,10 +6,10 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
+				mono: ["Space Grotesk Variable", ...defaultTheme.fontFamily.mono],
 				sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
 
-				display: ["Space Mono", ...defaultTheme.fontFamily.mono],
+				display: ["Space Grotesk Variable", ...defaultTheme.fontFamily.mono],
 				body: ["InterVariable", ...defaultTheme.fontFamily.sans],
 			}
 		},
