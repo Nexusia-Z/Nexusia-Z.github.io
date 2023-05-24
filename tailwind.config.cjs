@@ -8,14 +8,18 @@ module.exports = {
 			typography: ({ theme }) => ({
 				DEFAULT: {
 					css: {
+						maxWidth: '65ch',
 						"--tw-prose-body": theme("colors.sky.50"),
+						"--tw-prose-code": theme("colors.sky.50"),
+						"--tw-prose-code-background": theme("colors.sky.900"),
 						"--tw-prose-links": theme("colors.sky.200"),
-
+						'--tw-prose-bullets': theme("colors.sky.50"),
+						'--tw-prose-invert-bullets': theme("colors.sky.50"),
 					}
 				}
 			}),
 			fontFamily: {
-				mono: ["Space Grotesk Variable", ...defaultTheme.fontFamily.mono],
+				mono: ["Space Mono", ...defaultTheme.fontFamily.mono],
 				sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
 
 				display: ["Space Grotesk Variable", ...defaultTheme.fontFamily.mono],

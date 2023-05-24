@@ -1,0 +1,47 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+
+const title = frontmatter.title ? `${frontmatter.title} - Blog` : "Blog";
+
+let subtitle = "";
+let subtitle_visible = false;
+
+if (frontmatter.author) {
+  subtitle += `by ${frontmatter.author}`;
+}
+
+if (frontmatter.date) {
+  subtitle += ` on ${frontmatter.date}`;
+}
+
+if (subtitle) {
+  subtitle_visible = true;
+}
+---
+
+<BaseLayout url={frontmatter.url} title={title}>
+  <div slot="header">
+    <h1 class="text-6xl md:text-7xl font-body font-black m-3 text-center">
+      {frontmatter.title}
+    </h1>
+    <p hidden={!subtitle_visible} class="text-center text-slate-400">
+      {subtitle}
+    </p>
+  </div>
+
+  <style is:global>
+    .prose-2xl ul {
+        @apply list-disc list-inside;
+    }
+    .prose-2xl ol {
+        @apply list-decimal list-inside;
+    }
+  </style>
+
+  <div class="flex justify-center items-center">
+      <article class="prose-2xl m-4 max-w-prose">
+        <slot />
+      </article>
+  </div>
+</BaseLayout>

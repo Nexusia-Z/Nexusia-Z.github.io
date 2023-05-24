@@ -1,6 +1,12 @@
 ---
-import '@fontsource-variable/space-grotesk';
+import "@fontsource-variable/space-grotesk";
 import "@fontsource/inter";
+import "@fontsource/space-mono";
+
+const { title } = Astro.props;
+
+const appendedTitle = title ? `${title} - Nexusia Z` : "Nexusia Z";
+
 import Header from "../components/Header.astro";
 ---
 
@@ -10,20 +16,18 @@ import Header from "../components/Header.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{appendedTitle}</title>
   </head>
   <body
     class="min-h-screen bg-gradient-to-b from-slate-700 to-slate-900 text-sky-50"
   >
     <header>
-      <Header />
+      <Header/>
       <slot name="header" />
     </header>
     <main>
       <slot>
-        <p>
-          No Content Provided.
-        </p>
+        <p>No Content Provided.</p>
       </slot>
     </main>
     <footer>
