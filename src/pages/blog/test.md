@@ -2,6 +2,8 @@
 layout: ../../layouts/BlogPage.astro
 title: Test
 author: Vardhan Patil
+description: |
+  Lorem ipsum dolor sit amet, proident pariatur cillum adipiscing do. Nisi reprehenderit non labore pariatur ex ut sit. In aute incididunt enim aute incididunt. Cupidatat eiusmod esse est minim culpa id. Eu cillum nisi pariatur sit incididunt culpa. Occaecat duis commodo ea exercitation aute ad exercitation, cupidatat culpa nostrud ullamco magna fugiat nostrud mollit. Consequat fugiat in consectetur exercitation sint est cillum. In irure ullamco laboris minim ut ullamco, excepteur eiusmod aliquip excepteur officia. Quis nulla sit do, aliquip dolore consequat eu commodo laboris laborum. Nulla non sunt incididunt exercitation elit ut, nostrud sint aliqua voluptate in elit.
 date: May 24, 2023
 ---
 
