@@ -26,7 +26,7 @@ if (subtitle) {
 ---
 
 <BaseLayout url={frontmatter.url} title={title}>
-  <div slot="header">
+  <div slot="header" class="m-8">
     <h1 class="text-6xl md:text-7xl font-body font-black m-3 text-center">
       {frontmatter.title}
     </h1>
@@ -44,7 +44,7 @@ if (subtitle) {
     }
   </style>
 
-  <div class="flex justify-center items-center">
+  <div class="flex justify-center items-center mt-8">
     <article class="prose-2xl m-4 max-w-prose">
       <slot />
     </article>
