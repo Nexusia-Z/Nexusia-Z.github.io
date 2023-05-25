@@ -1,0 +1,50 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout description="Terms and Conditions">
+  <style is:global>
+    .prose-2xl ul {
+      @apply list-disc list-outside;
+    }
+    .prose-2xl ol {
+      @apply list-decimal list-outside;
+    }
+    .prose-xl ul {
+      @apply list-disc list-outside;
+    }
+    .prose-xl ol {
+      @apply list-decimal list-outside;
+    }
+  </style>
+
+  <div class="flex justify-center items-center">
+    <main class="text-3xl mt-4 max-w-prose">
+      <h2 class="text-5xl md:text-6xl font-display text-center font-black">
+        Terms and Conditions
+      </h2>
+      <div class="prose-xl md:prose-2xl m-5">
+        <li>
+          <strong>Code of Conduct:</strong> Nexusia Youth Group maintains a strict
+          code of conduct to ensure a respectful and inclusive environment. Members
+          are expected to treat each other with respect, refrain from engaging in
+          discriminatory or harmful behavior, and abide by the guidelines set forth
+          by the community moderators.
+        </li>
+        <li>
+          <strong>Confidentiality:</strong> Members are encouraged to respect the
+          confidentiality of sensitive information shared within the community. Any
+          proprietary or confidential information shared during discussions or collaborations
+          should be treated with utmost discretion and not disclosed without prior
+          consent.
+        </li>
+        <li>
+          <strong>Non-Solicitation:</strong> Nexusia Youth Group is primarily a community
+          for collaboration and support. Unsolicited advertisements, spam, or any
+          form of self-promotion that does not align with the community's goals and
+          values
+        </li>
+      </div>
+    </main>
+  </div>
+</BaseLayout>

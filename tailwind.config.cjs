@@ -8,7 +8,7 @@ module.exports = {
 			typography: ({ theme }) => ({
 				DEFAULT: {
 					css: {
-						maxWidth: '65ch',
+						maxWidth: '50ch',
 						"--tw-prose-body": theme("colors.sky.50"),
 						"--tw-prose-code": theme("colors.sky.50"),
 						"--tw-prose-code-background": theme("colors.sky.900"),
