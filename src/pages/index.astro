@@ -2,19 +2,80 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout description="Nexusia Z is a Tribe for Teenage Builders">
-  <main class="text-3xl text-center mt-4">
-    <h2 class="text-5xl md:text-6xl font-display font-black">Home</h2>
-    <div class="prose-2xl m-4">
-      <p>
-        Nexusia Z is a <strong class="text-teal-200"
-          >Tribe for Teenage Builders</strong
-        >
-      </p>
-      <p>
-        We like to build stuff together, and share our creations with each
-        other.
-      </p>
-    </div>
-  </main>
+<BaseLayout
+  description="Nexusia Z is a community on Discord dedicated to empowering students \
+interested in entrepreneurship and startup ventures."
+>
+  <style is:global>
+    .prose-2xl ul {
+      @apply list-disc list-outside;
+    }
+    .prose-2xl ol {
+      @apply list-decimal list-outside;
+    }
+  </style>
+
+  <div class="flex justify-center items-center">
+    <main class="text-3xl mt-4 max-w-prose">
+      <h2 class="text-5xl md:text-6xl font-display text-center font-black">
+        Home
+      </h2>
+      <div class="prose-2xl m-4">
+        <p>
+          Nexusia Z is a community on Discord dedicated to empowering students
+          interested in entrepreneurship and startup ventures.
+        </p>
+        <h2>Our Goals</h2>
+        <ul>
+          <li>
+            <strong>Foster Collaboration:</strong> We aim to create a collaborative
+            environment where students can connect with like-minded individuals,
+            form teams, and work together on innovative startup projects.
+          </li>
+
+          <li>
+            <strong>Provide Support:</strong> We strive to offer comprehensive support
+            to young entrepreneurs, providing them with guidance, mentorship, and
+            resources to help them navigate the challenging journey of starting and
+            scaling their ventures
+          </li>
+
+          <li>
+            <strong>Facilitate Learning:</strong> We believe in the importance of
+            continuous learning and skill development. Our community provides educational
+            resources, workshops, and webinars to equip students with the necessary
+            tools and knowledge to succeed in their entrepreneurial endeavors.
+          </li>
+        </ul>
+        <h2>What we provide</h2>
+        <ul>
+          <li>
+            <strong>Networking Opportunities:</strong> Our community facilitates
+            networking among students interested in startups. Members can connect
+            with fellow entrepreneurs, mentors, and industry professionals, expanding
+            their professional network and forging meaningful collaborations.
+          </li>
+          <li>
+            <strong>Project Incubation:</strong> Nexusia Youth Group provides a platform
+            for students to pitch their startup ideas and receive constructive feedback
+            from the community. Successful projects may receive additional support,
+            including access to resources, funding opportunities, and connections
+            to potential investors.
+          </li>
+          <li>
+            <strong>Advice and Feedback:</strong> Members can seek advice and feedback
+            from the community on various aspects of their startups, such as business
+            models, marketing strategies, and product development. Peer-to-peer support
+            and constructive criticism help refine ideas and enhance project viability.
+          </li>
+          <li>
+            <strong> Public Forum:</strong> Our community features a public forum
+            where members can engage in discussions, share insights, and ask questions
+            related to entrepreneurship and startups. The forum acts as a knowledge-sharing
+            platform, fostering a culture of learning and collaboration.
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
 </BaseLayout>
